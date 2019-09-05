@@ -16,8 +16,8 @@ namespace Acme.BL
         {
             get
             {
-                return $"{LastName} , {FirstName}";
-            }                   
+                return $"{FirstName }, {LastName}";
+            }
         }
 
 
