@@ -16,7 +16,17 @@ namespace Acme.BL
         {
             get
             {
-                return $"{FirstName }, {LastName}";
+                string fullName = LastName;
+                if (!string.IsNullOrWhiteSpace(FirstName))
+                {
+                    if (!string.IsNullOrWhiteSpace(fullName))
+                    {
+                        fullName += ", ";
+                    }
+                    fullName += FirstName;  
+                }
+
+                return fullName;
             }
         }
 
