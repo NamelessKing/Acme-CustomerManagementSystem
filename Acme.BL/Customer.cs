@@ -30,6 +30,8 @@ namespace Acme.BL
             }
         }
 
+        public static int InstanceCount { get; set; }
+
 
     }
 }
