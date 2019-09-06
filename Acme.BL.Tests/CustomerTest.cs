@@ -62,5 +62,37 @@ namespace Acme.BL.Tests
             // -- Assert 
             Assert.AreEqual(expected, actual);
         }
+
+
+        [TestMethod]
+        public void StaticTest()
+        {
+            // -- Arrange
+            _ = new Customer
+            {
+                FirstName = "Gino"
+            };
+            Customer.InstanceCount++;
+
+            _ = new Customer
+            {
+                FirstName = "Bruno"
+            };
+            Customer.InstanceCount++;
+
+            _ = new Customer
+            {
+                FirstName = "Mario"
+            };
+            Customer.InstanceCount++;
+
+            int expected = 3;
+
+            // -- Act
+            int actual = Customer.InstanceCount;
+
+            // -- Assert 
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
