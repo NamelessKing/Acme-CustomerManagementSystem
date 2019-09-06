@@ -94,5 +94,44 @@ namespace Acme.BL.Tests
             // -- Assert 
             Assert.AreEqual(expected, actual);
         }
+
+
+        [TestMethod]
+        public void ValidateValid()
+        {
+            // -- Arrange
+            Customer customer = new Customer
+            {
+                LastName = "Gino",
+                EmailAddess = "gino@email.com"
+            };
+
+            bool expected = true;
+
+            // -- Act
+            bool actual = customer.Validate();
+
+            // -- Assert 
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        [TestMethod]
+        public void ValidateMissingLastName()
+        {
+            // -- Arrange
+            Customer customer = new Customer
+            {
+                EmailAddess = "gino@email.com"
+            };
+
+            bool expected = false;
+
+            // -- Act
+            bool actual = customer.Validate();
+
+            // -- Assert 
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
