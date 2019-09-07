@@ -15,7 +15,7 @@ namespace Acme.BL
 
         public Address(int addressId)
         {
-
+            AddressId = addressId;
         }
 
         public int AddressId { get; private set; }
