@@ -42,34 +42,6 @@ namespace Acme.BL
 
         public static int InstanceCount { get; set; }
 
-        /// <summary>
-        /// Retrieve one cutomer by id.
-        /// </summary>
-        /// <param name="customerId"></param>
-        /// <returns></returns>
-        public Customer Retrieve(int customerId)
-        {
-            return new Customer();
-        }
-
-        /// <summary>
-        /// Retrieve all customers.
-        /// </summary>
-        /// <returns></returns>
-        public List<Customer> Retrieve()
-        {
-            return new List<Customer>();
-        }
-
-        /// <summary>
-        /// Save the current customer.
-        /// </summary>
-        /// <returns></returns>
-        public bool Save()
-        {
-            return true;
-        }
-
 
         /// <summary>
         /// Validates the customer data.
